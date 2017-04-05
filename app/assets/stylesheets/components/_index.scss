@@ -3,8 +3,23 @@
 @import "badges";
 @import "product";
 
+a {
+  text-decoration: none;
+}
+
 .main-title {
   color: #D23333;
   text-align: center;
 }
 
+.restaurant-card {
+  background-color: #EFEFEF;
+  text-align: center;
+  align-items: center;
+}
+
+.review-card {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
