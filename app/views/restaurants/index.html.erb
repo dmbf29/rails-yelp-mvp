@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="main-title">Restaurants</h1>
+  <% @restaurants.each do |restaurant| %>
+    <div class="product">
+      <div class='product-body'>
+        <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+      </div>
+      <div class="product-controls">
+        <p><%= restaurant.address %></p>
+        <p><em><%= restaurant.phone_number %></em></p>
+        <p><strong><%= restaurant.category %></strong></p>
+      </div>
+    </div>
+  <% end %>
