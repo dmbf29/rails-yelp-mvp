@@ -1,3 +1,7 @@
+<% content_for(:title_tag) do %>
+  Read <%= @restaurant.name %> on My Yelp
+<% end %>
+
 
 <h1 class="main-title"><%= @restaurant.name %></h1>
 
@@ -11,8 +15,6 @@
         <p><em><%= @restaurant.phone_number %></em></p>
         <%= link_to "Write a Review", new_restaurant_review_path(@restaurant), :class =>"review-wagon-button btn" %>
         <br>
-
-
       </div>
     </div>
   </div>
@@ -26,7 +28,10 @@
         <hr>
           <% @restaurant.reviews.each do |review| %>
             <p><%= review.content %></p>
-            <p><em><%= review.rating %> / 5 Stars</em></p>
+            <p><% review.rating.times do %>
+              <%= image_tag("yelp-star.png") %>
+            <% end %>
+            </p>
             <hr>
           <% end %>
       </div>
