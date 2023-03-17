@@ -1,5 +1,6 @@
 class Review < ApplicationRecord
-  belongs_to :restaurant
+  self.table_name = 'yelp_mv_reviews'
+  belongs_to :restaurant, foreign_key: 'yelp_mv_restaurant_id'
 
   validates :content, presence: true
   validates :rating, numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 5 }
