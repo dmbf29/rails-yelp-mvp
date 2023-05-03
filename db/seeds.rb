@@ -1,17 +1,20 @@
-require "faker"
-
-puts "Cleaning database..."
+puts "Cleaning restaurants..."
 Restaurant.destroy_all
 
 puts "Creating restaurants..."
 
 15.times do
-  Restaurant.create(
-    name: Faker::Team.creature,
+  restaurant = Restaurant.create!(
+    name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
     phone_number: Faker::PhoneNumber.phone_number,
     category: ["chinese", "italian", "japanese", "french", "belgian"].sample,
   )
+  Review.create!(
+    content: '',
+    rating: rand(3..5),
+    restaurant: restaurant
+  )
 end
 
-puts "... made restaurants"
+puts "... made #{Restaurant.count} restaurants"

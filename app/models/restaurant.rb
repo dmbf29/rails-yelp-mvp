@@ -1,6 +1,6 @@
 class Restaurant < ApplicationRecord
   self.table_name = 'yelp_mv_restaurants'
-  has_many :reviews, foreign_key: "lw_cine_restaurant_id", dependent: :destroy
+  has_many :reviews, foreign_key: "yelp_mv_restaurant_id", dependent: :destroy
 
   validates :category, inclusion: { in: ["chinese", "italian", "japanese", "french", "belgian"], allow_nil: false }
   validates :name, presence: true
