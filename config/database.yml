@@ -9,7 +9,7 @@ development:
 
 test:
   <<: *default
-  database: one_db_to_rule_them_all_test
+  database: rails_yelp_mvp_test
 
 production:
   <<: *default
