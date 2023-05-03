@@ -13,6 +13,6 @@ test:
 
 production:
   <<: *default
-  database: one_db_to_rule_them_all_production
-  username: one_db_to_rule_them_all
-  password: <%= ENV["ONE_DB_TO_RULE_THEM_ALL_DATABASE_PASSWORD"] %>
+  database: rails_yelp_mvp_production
+  username: rails_yelp_mvp
+  password: <%= ENV["RAILS_YELP_MVP_DATABASE_PASSWORD"] %>
