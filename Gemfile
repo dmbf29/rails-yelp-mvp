@@ -54,6 +54,7 @@ gem "devise"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 gem 'faker'
+gem 'coffee-rails', '~> 4.2'
 gem 'bootstrap-sass'
 
 group :development, :test do
