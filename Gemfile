@@ -56,6 +56,7 @@ gem "simple_form"
 gem 'faker'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
+gem 'turbolinks', '~> 5'
 gem 'bootstrap-sass'
 
 group :development, :test do
