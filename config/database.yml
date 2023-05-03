@@ -1,31 +1,18 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
 default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: rails_yelp_mvp_development
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: one_db_to_rule_them_all_test
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: rails-yelp-mvp_production
-  username: rails-yelp-mvp
-  password: <%= ENV['RAILS-YELP-MVP_DATABASE_PASSWORD'] %>
+  <<: *default
+  database: one_db_to_rule_them_all_production
+  username: one_db_to_rule_them_all
+  password: <%= ENV["ONE_DB_TO_RULE_THEM_ALL_DATABASE_PASSWORD"] %>
