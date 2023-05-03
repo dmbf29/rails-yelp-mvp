@@ -126,11 +126,6 @@ GEM
     io-console (0.6.0)
     irb (1.6.4)
       reline (>= 0.3.0)
-    jbuilder (2.11.5)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
-    jsbundling-rails (1.1.1)
-      railties (>= 6.0.0)
     loofah (2.20.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -235,8 +230,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stimulus-rails (1.2.1)
-      railties (>= 6.0.0)
     thor (1.2.1)
     tilt (2.1.0)
     timeout (0.3.2)
@@ -283,8 +276,6 @@ DEPENDENCIES
   dotenv-rails
   faker
   font-awesome-sass (~> 6.1)
-  jbuilder
-  jsbundling-rails
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
@@ -293,7 +284,6 @@ DEPENDENCIES
   selenium-webdriver
   simple_form
   sprockets-rails
-  stimulus-rails
   turbo-rails
   tzinfo-data
   web-console
